@@ -1,9 +1,9 @@
 const express = require('express');
 
 const app = express();
-
+const randomNumber = Math.floor(Math.random() * (10 - 1) + 1)
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.send("The random number generated is: " + randomNumber);
 });
 
 const port = process.env.PORT || 3000;
